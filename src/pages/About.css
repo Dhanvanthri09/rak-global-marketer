@@ -1,0 +1,288 @@
+/* src/pages/About.css */
+
+.about-wrapper {
+  width: 100%;
+  background-color: var(--white);
+}
+
+/* --- 1. HERO SECTION --- */
+.about-hero {
+  background-color: var(--primary-green);
+  padding: 180px 20px 100px; 
+  text-align: center;
+  color: var(--white);
+}
+
+.hero-text {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-hero h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.about-hero p {
+  font-size: 1.2rem;
+  color: var(--beige-light);
+  line-height: 1.6;
+}
+
+/* --- 2. STORY SECTION (Grid Layout for Perfect Alignment) --- */
+.about-story {
+  padding: 100px 20px;
+  background-color: var(--white);
+  overflow: hidden; 
+}
+
+.story-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  gap: 60px;
+  align-items: center;
+}
+
+.story-content {
+  padding-right: 20px;
+}
+
+.story-content h2 {
+  font-size: 2.8rem;
+  color: var(--primary-green);
+  margin-bottom: 30px;
+}
+
+.story-content p {
+  font-size: 1.1rem;
+  color: var(--text-dark);
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.story-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.story-image img {
+  width: 100%;
+  max-width: 500px; 
+  height: auto;
+  display: block;
+  object-fit: contain;
+  mix-blend-mode: multiply; 
+}
+
+/* --- 3. MISSION & VISION --- */
+.about-mission-vision {
+  padding: 80px 20px;
+  background-color: var(--beige-light);
+}
+
+.mv-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 30px;
+}
+
+.mv-card {
+  flex: 1;
+  padding: 60px 50px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.dark-card {
+  background-color: var(--primary-green);
+  color: var(--white);
+}
+
+.dark-card h3 { color: var(--beige-light); }
+.dark-card p { color: var(--white); }
+
+.light-card {
+  background-color: var(--white);
+  color: var(--text-dark);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.light-card h3 { color: var(--primary-green); }
+
+.mv-card h3 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+.mv-card p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+/* --- 4. CORE VALUES (with Dark Nature Background) --- */
+.about-values {
+  position: relative;
+  padding: 120px 20px;
+  background-image: url('/farm-bg.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  z-index: 1;
+  text-align: center;
+}
+
+/* Rich, dark overlay so the farm is visible but the white cards pop */
+.about-values::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(10, 25, 15, 0.65); /* Deep, elegant dark green/black tint */
+  z-index: -1; 
+}
+
+.values-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2; 
+}
+
+/* Changed text to white for perfect contrast on the dark background */
+.about-values h2 {
+  font-size: 3rem;
+  color: #ffffff;
+  margin-bottom: 15px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.4); /* Subtle shadow for depth */
+}
+
+/* Changed subtitle to a soft light grey */
+.values-subtitle {
+  font-size: 1.25rem;
+  color: #e2e8f0; 
+  font-weight: 500;
+  margin-bottom: 70px;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+}
+
+/* Card layout grid */
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 35px;
+}
+
+/* Solid white cards look incredibly premium on a dark background */
+.value-item {
+  background-color: #ffffff; 
+  padding: 40px 30px;
+  border-radius: 16px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25); /* Stronger shadow for the dark background */
+  border: none; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.value-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35); 
+}
+
+.v-icon {
+  font-size: 3.2rem;
+  color: var(--primary-green); 
+  margin-bottom: 25px;
+  transition: transform 0.3s ease;
+}
+
+.value-item:hover .v-icon {
+  transform: scale(1.08); 
+}
+
+.value-item h4 {
+  font-size: 1.4rem;
+  color: #1a202c; 
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.value-item p {
+  color: #4a5568; 
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+@media (max-width: 768px) {
+  .about-values {
+    padding: 80px 20px;
+  }
+  .about-values h2 {
+    font-size: 2.4rem;
+  }
+}
+
+
+
+
+/* --- 5. CALL TO ACTION --- */
+.about-cta {
+  background-color: var(--primary-green);
+  padding: 100px 20px;
+  text-align: center;
+  color: var(--white);
+}
+
+.about-cta h2 {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+}
+
+.about-cta p {
+  font-size: 1.2rem;
+  color: var(--beige-light);
+  margin-bottom: 40px;
+}
+
+.btn-solid-green {
+  display: inline-block;
+  background-color: var(--white);
+  color: var(--primary-green);
+  padding: 16px 45px;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.btn-solid-green:hover {
+  background-color: #f1f1f1;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* --- RESPONSIVE DESIGN --- */
+@media (max-width: 900px) {
+  .story-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .story-content {
+    padding-right: 0;
+  }
+  .mv-container {
+    flex-direction: column;
+  }
+  .about-hero h1 { font-size: 2.8rem; }
+  .story-content h2, .about-values h2, .about-cta h2 { font-size: 2.3rem; }
+}

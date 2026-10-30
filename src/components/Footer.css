@@ -1,0 +1,180 @@
+/* src/components/Footer.css */
+.footer-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- 1. COMMUNITY SECTION --- */
+.community-section {
+  background-color: var(--white, #ffffff);
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.community-section h2 {
+  font-size: 2.2rem;
+  color: #111;
+  margin-bottom: 40px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  font-size: 1.6rem;
+  color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0,0,0,0.15);
+}
+
+/* Brand Colors for Icons */
+.whatsapp-icon { background-color: #25D366; }
+.facebook-icon { background-color: #1877F2; }
+.instagram-icon { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%); }
+.linkedin-icon { background-color: #0A66C2; }
+
+/* --- 2. PREMIUM MAIN FOOTER --- */
+.main-footer {
+  /* Rich, dark luxury gradient instead of a flat bright green */
+  background: linear-gradient(135deg, #0d2a14 0%, #164621 100%); 
+  color: #ffffff;
+  padding: 80px 20px 30px;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  /* 3 Columns: Brand gets slightly more space than the others */
+  grid-template-columns: 2fr 1fr 1.5fr; 
+  gap: 60px;
+  margin-bottom: 60px;
+}
+
+.footer-col h3 {
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #e8d8b0; /* Premium subtle beige/gold accent */
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+.footer-brand p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.75); /* Soft, elegant text color */
+  max-width: 380px;
+}
+
+/* Explore Column Styling */
+.footer-explore ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-explore li {
+  margin-bottom: 12px;
+}
+
+.footer-explore a {
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  font-size: 1.05rem;
+  transition: color 0.3s ease;
+}
+
+.footer-explore a:hover {
+  color: #e8d8b0;
+}
+
+/* Contact Column Styling */
+.footer-contact ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-contact li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.6;
+}
+
+.f-icon {
+  margin-right: 15px;
+  margin-top: 4px;
+  color: #e8d8b0; /* Gold/Beige icons for a luxury feel */
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+/* Footer Bottom Bar */
+.footer-bottom {
+  max-width: 1200px;
+  margin: 0 auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.1); /* Very subtle divider line */
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.5); /* Dimmer text for bottom bar */
+}
+
+.footer-links {
+  display: flex;
+  gap: 30px;
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
+/* --- RESPONSIVENESS --- */
+@media (max-width: 900px) {
+  .footer-content {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer-links {
+    justify-content: center;
+  }
+}

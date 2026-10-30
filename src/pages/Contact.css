@@ -1,0 +1,118 @@
+/* src/pages/Contact.css */
+.contact-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 140px 20px 40px; /* 140px top padding pushes it below the header */
+}
+
+.contact-page h2 {
+  color: var(--primary-green);
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.contact-intro {
+  text-align: center;
+  color: var(--text-dark);
+  margin-bottom: 40px;
+}
+
+.contact-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+/* Keep your .contact-details and .contact-form styles below here! */
+
+
+
+.contact-details {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.detail-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.icon {
+  color: var(--primary-green);
+  font-size: 1.5rem;
+  margin-top: 5px;
+}
+
+.icon.whatsapp {
+  color: #25D366;
+}
+
+.detail-item h3 {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+  color: var(--text-dark);
+}
+
+.detail-item p, .detail-item a {
+  color: #555;
+  line-height: 1.5;
+}
+
+.detail-item a:hover {
+  text-decoration: underline;
+  color: var(--primary-green);
+}
+
+.contact-form-container {
+  flex: 1;
+  min-width: 300px;
+  background-color: var(--white);
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.contact-form-container h3 {
+  color: var(--primary-green);
+  margin-bottom: 20px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input, .contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: inherit;
+}
+
+.submit-btn {
+  background-color: var(--primary-green);
+  color: var(--white);
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: var(--secondary-green);
+}
+
+.form-note {
+  font-size: 0.8rem;
+  color: #888;
+  margin-top: 15px;
+  font-style: italic;
+}

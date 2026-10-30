@@ -1,0 +1,82 @@
+/* src/components/Navbar.css */
+.header-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  background-color: var(--primary-green, #1a5628); /* Forces the solid dark green background */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* Adds a premium drop shadow below the header */
+}
+
+.top-banner {
+  background-color: #27ae60; /* Bright premium green */
+  color: white;
+  text-align: center;
+  padding: 8px 15px;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+.navbar {
+  background-color: transparent; /* Transparent to see image behind */
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+.navbar-logo {
+  color: var(--white);
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+}
+
+.nav-menu {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-link {
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.nav-link:hover {
+  color: #27ae60;
+}
+
+.nav-icons {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  color: var(--white);
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.icon-btn:hover {
+  color: #27ae60;
+}

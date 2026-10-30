@@ -1,0 +1,180 @@
+/* src/pages/Products.css */
+
+.products-wrapper {
+  width: 100%;
+  background-color: var(--beige-light, #f7f5f0);
+}
+
+/* --- 1. HERO SECTION --- */
+.products-hero {
+  background-color: var(--primary-green, #1a5628);
+  padding: 180px 20px 100px; /* Accounts for the fixed navbar */
+  text-align: center;
+  color: var(--white, #ffffff);
+}
+
+.products-hero .hero-text {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.products-hero h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  letter-spacing: -0.5px;
+}
+
+.products-hero p {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.6;
+}
+
+/* --- 2. PRODUCTS GALLERY --- */
+.products-gallery {
+  padding: 100px 20px;
+}
+
+.gallery-container {
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+}
+
+/* Product Card Styling */
+.product-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Image Container & Hover Zoom Effect */
+.product-image-container {
+  width: 100%;
+  height: 240px;
+  overflow: hidden; /* Keeps the zoomed image inside the rounded corners */
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.product-card:hover .product-image {
+  transform: scale(1.1); /* Smooth zoom in on hover */
+}
+
+/* Product Info Box */
+.product-info {
+  padding: 30px 25px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.product-info h3 {
+  font-size: 1.5rem;
+  color: var(--primary-green, #1a5628);
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.product-info p {
+  font-size: 1.05rem;
+  color: #4a5568;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  flex-grow: 1; /* Pushes the link to the bottom */
+}
+
+/* Inquire Link */
+.inquire-link {
+  display: inline-flex;
+  align-items: center;
+  color: var(--primary-green, #1a5628);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.05rem;
+  transition: color 0.3s ease;
+  margin-top: auto;
+}
+
+.arrow-icon {
+  margin-left: 8px;
+  font-size: 0.9rem;
+  transition: transform 0.3s ease;
+}
+
+.inquire-link:hover {
+  color: #27ae60;
+}
+
+.inquire-link:hover .arrow-icon {
+  transform: translateX(5px); /* Arrow slides right on hover */
+}
+
+/* --- 3. CTA SECTION --- */
+.products-cta {
+  background: linear-gradient(135deg, #0d2a14 0%, #164621 100%);
+  padding: 100px 20px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.products-cta h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.products-cta p {
+  font-size: 1.15rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 40px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-solid-white {
+  display: inline-block;
+  background-color: #ffffff;
+  color: var(--primary-green, #1a5628);
+  padding: 16px 45px;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-solid-white:hover {
+  background-color: #e8d8b0;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* --- RESPONSIVENESS --- */
+@media (max-width: 768px) {
+  .products-hero { padding: 140px 20px 80px; }
+  .products-hero h1 { font-size: 2.8rem; }
+  .products-cta h2 { font-size: 2rem; }
+}

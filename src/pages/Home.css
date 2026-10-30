@@ -1,0 +1,160 @@
+/* src/pages/Home.css */
+.home-wrapper {
+  width: 100%;
+}
+
+/* --- HERO CAROUSEL --- */
+.hero-carousel-section {
+  position: relative;
+  height: 100vh; 
+  min-height: 650px;
+  overflow: hidden;
+  background-color: #121212; 
+}
+
+.carousel-slide {
+  position: absolute;
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  /* Increased from 1.2s to 2.5s for a very slow, cinematic fade */
+  transition: opacity 1.5s ease-in-out; 
+  z-index: 1;
+}
+
+.carousel-slide.active {
+  opacity: 1;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  /* Reduced from 0.4 to 0.15 to make the images much brighter */
+  background: rgba(0, 0, 0, 0.15); 
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content {
+  width: 100%;
+  height: 100%;
+  position: relative; /* This allows us to lock items to the bottom */
+}
+
+/* --- LOCK BUTTON TO THE BOTTOM --- */
+.hero-buttons {
+  position: absolute;
+  bottom: 120px; /* Pushes the button perfectly below the image text */
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  z-index: 10;
+  animation: slideFadeIn 1.2s ease;
+}
+
+.btn-outline {
+  padding: 14px 40px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1.05rem;
+  color: var(--white);
+  border: 2px solid var(--white);
+  background-color: rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.btn-outline:hover {
+  background-color: var(--white);
+  color: #1a3c1e; 
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* --- LOCK DOTS TO THE BOTTOM --- */
+.carousel-dots {
+  position: absolute;
+  bottom: 50px; /* Sits nicely right at the bottom edge */
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  z-index: 10;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  background-color: transparent;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: var(--white);
+  border-color: var(--white);
+  transform: scale(1.2);
+}
+
+.dot:hover {
+  border-color: var(--white);
+}
+
+@keyframes slideFadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- SOURCING STANDARD SECTION --- */
+.sourcing-standard {
+  padding: 80px 20px;
+  background-color: var(--white);
+}
+
+.standard-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.standard-container h2 {
+  color: var(--primary-green);
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+}
+
+.feature-card {
+  padding: 30px;
+  background-color: var(--beige-light);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.02);
+}
+
+.feature-icon {
+  font-size: 3rem;
+  color: var(--primary-green);
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .hero-buttons { bottom: 100px; }
+  .carousel-dots { bottom: 30px; }
+}
